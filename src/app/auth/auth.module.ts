@@ -11,8 +11,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  {path: 'forgot-password', component: ForgotPasswordComponent }
+  { path: 'forgot-password', component: ForgotPasswordComponent }
 ];
 
 @NgModule({
@@ -26,7 +27,6 @@ const routes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     TranslateModule,
-
     MatIconModule
   ]
 })

@@ -1,0 +1,52 @@
+<div class="login-container" [class.rtl]="currentLang === 'ar'">
+  <!-- Left Side - Login Form -->
+  <div class="login-form-section">
+    <div class="form-wrapper">
+      <div class="header-section">
+        <h1 class="login-title">{{ 'LOGIN.TITLE' | translate }}</h1>
+      </div>
+
+      <form class="login-form" (ngSubmit)="onLogin()">
+        <mat-label class="mb-2">{{ 'LOGIN.EMAIL' | translate }}</mat-label>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <input matInput type="email" [(ngModel)]="email" name="email" required>
+        </mat-form-field>
+        <div class="password-label-row">
+          <mat-label>{{ 'LOGIN.PASSWORD' | translate }}</mat-label>
+          <button type="button" mat-button class="forgot-password-btn" (click)="onForgotPassword()">
+            {{ 'LOGIN.FORGOT' | translate }}
+          </button>
+        </div>
+        <mat-form-field appearance="outline" class="full-width">
+          <input matInput [type]="hidePassword ? 'password' : 'text'" [(ngModel)]="password" name="password" required>
+          <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hidePassword">
+            <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+
+        <button mat-raised-button type="submit" class="login-btn full-width">
+          {{ 'LOGIN.BUTTON' | translate }}
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Right Side - Airplane Window -->
+  <div class="airplane-section">
+    <!-- Content Overlay -->
+    <div class="content-overlay">
+      <!-- Logo -->
+      <div class="logo-section">
+        <img src="../../../assets/images/login-logo.png" alt="Yallago Logo" class="logo-image">
+      </div>
+
+      <!-- Welcome Text -->
+      <div class="welcome-section">
+        <h2 class="welcome-title">{{ 'LOGIN.WELCOME' | translate }}</h2>
+        <p class="welcome-subtitle">{{ 'LOGIN.SUBTITLE' | translate }}</p>
+      </div>
+    </div>
+  </div>
+</div>

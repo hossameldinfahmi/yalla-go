@@ -1,0 +1,23 @@
+$primary-color: #1976d2;
+$accent-color: #ff4081;
+$warn-color: #f44336;
+$background-color: #f5f5f5;
+$text-color: #212121;
+
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+
+$font-family-base: 'Tajawal', Arial, Helvetica, sans-serif;
+
+.container {
+  max-width: 400px;
+  background-color: red;
+  margin: $spacing-xl auto;
+  padding: $spacing-lg;
+  background: $background-color;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba($primary-color, 0.08);
+}

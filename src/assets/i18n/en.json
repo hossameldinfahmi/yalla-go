@@ -1,0 +1,28 @@
+{
+  "LOGIN": {
+    "TITLE": "Login",
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "FORGOT": "Forgot password?",
+    "BUTTON": "Login",
+    "WELCOME": "Welcome to Yallago",
+    "SUBTITLE": "Your booking... your destination... all in one place"
+  },
+  "FORGOT": {
+    "TITLE": "Forgot Password",
+    "SUBTITLE": "Enter your email to reset your password",
+    "EMAIL_LABEL": "Email Address",
+    "CONTINUE": "Continue",
+    "OTP_MESSAGE": "Please check the OTP code sent to your email {{email}} to reset your account. Thank you.",
+    "OTP_LABEL": "OTP Code",
+    "VERIFY": "Verify OTP",
+    "NEW_PASSWORD_LABEL": "New Password",
+    "CONFIRM_PASSWORD_LABEL": "Confirm New Password",
+    "RESET": "Reset Password",
+    "WELCOME": "Forgot Password",
+    "INSTRUCTIONS": "Enter your email to reset your password",
+    "RESET_TITLE": "Reset Password",
+    "RESET_SUBTITLE": "Enter your new password",
+    "SAVE_NEW_PASSWORD": "Save New Password"
+  }
+}

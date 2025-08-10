@@ -1,0 +1,15 @@
+@import 'variables';
+
+body,
+html,
+h1, h2, h3, h4, h5, h6,
+label,
+p,
+span,
+div,
+input,
+button,
+a,
+th, td {
+  font-family: $font-family-base !important;
+}

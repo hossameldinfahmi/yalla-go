@@ -1,10 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap');
-
 * {
   font-family: 'Tajawal', Arial, Helvetica, sans-serif !important;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
+/* Don't override Material Icons & similar */
+.material-icons,
+.mat-icon,
+.fa,
+.fas,
+.far,
+.fab {
+  font-family: 'Material Icons' !important;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
 }

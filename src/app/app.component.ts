@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoadingService } from './shared/loading.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'] 
 })
 export class AppComponent {
-  title = 'yallago-dashboard';
+   constructor(private loading: LoadingService) {
+    this.loadData();
+   }
+
+  loadData() {
+    this.loading.show();
+
+    setTimeout(() => {
+      this.loading.hide();
+    }, 2000); 
+  }
 }

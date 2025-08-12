@@ -11,13 +11,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
+import { SharedModule } from './shared/shared.module';
 
 export function HttpLoaderFactory() {
   return new TranslateHttpLoader();
 }
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, NotFoundComponent],
+  declarations: [AppComponent, NavbarComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -25,6 +26,7 @@ export function HttpLoaderFactory() {
     MatToolbarModule,
     MatButtonModule,
     MatMenuModule,
+    SharedModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

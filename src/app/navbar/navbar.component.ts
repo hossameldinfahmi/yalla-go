@@ -1,17 +1,23 @@
-import { Component } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { Component } from "@angular/core"
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  selector: "app-navbar",
+  templateUrl: "./navbar.component.html",
+  styleUrls: ["./navbar.component.scss"],
 })
 export class NavbarComponent {
-  constructor(private translate: TranslateService) {}
+  navigationItems = [
+    { label: "لوحة التحكم", href: "#", active: false },
+    { label: "إدارة الحسابات", href: "#", active: false },
+    { label: "الطلبات", href: "#", active: false },
+    { label: "الموظفين", href: "#", active: false },
+    { label: "المحفظة", href: "#", active: false },
+    { label: "الاعدادات", href: "#", active: true },
+  ]
 
-  switchLang(lang: string) {
-    this.translate.use(lang);
-    document.documentElement.lang = lang;
-    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-  }
+  subNavigationItems = [
+    { label: "السياسات", href: "#", active: false },
+    { label: "اعدادات الميزانية", href: "#", active: true },
+    { label: "المستخدمين", href: "#", active: false },
+  ]
 }

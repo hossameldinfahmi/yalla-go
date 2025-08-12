@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 // import { AuthGuard } from './auth/auth.guard'; // Uncomment if you have AuthGuard
 
 const routes: Routes = [
@@ -7,7 +8,7 @@ const routes: Routes = [
   // Example of protecting a main route:
   // { path: '', canActivate: [AuthGuard], loadChildren: () => import('./main/main.module').then(m => m.MainModule) },
   { path: '', redirectTo: '/auth/login', pathMatch: 'full' },
-  { path: '**', redirectTo: '/auth/login' }
+  { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({

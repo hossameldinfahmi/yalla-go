@@ -1,1 +1,104 @@
-@import '../../styles/_variables.scss';
+.navbar-header {
+  background-color: #5137a6;
+  color: white;
+  font-family: var(--main-font, 'Cairo', 'Tajawal', Arial, sans-serif); 
+
+  .navbar-container {
+
+    .navbar-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .user-info {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .user-avatar {
+          width: 2rem;
+          height: 2rem;
+          background-color: rgba(255, 255, 255, 0.2);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          span {
+            font-size: 0.875rem;
+            font-weight: 500;
+          }
+        }
+
+        .user-name {
+          font-weight: 500;
+        }
+      }
+
+      .main-navigation {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        .nav-link {
+          text-decoration: none;
+          color: inherit;
+          transition: color 0.2s ease;
+          display: block;
+          height: 100%;
+          &:hover {
+            color: rgba(255, 255, 255, 0.8);
+          }
+          
+          &.active {
+            background-color: white;
+            color: #5137a6;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 23px 1.5rem;
+            border-radius: 0.5rem 0.5rem 0 0;
+            font-weight: 500;
+
+            &:hover {
+              color: #5137a6;
+            }
+          }
+        }
+      }
+
+      .logo {
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .sub-navigation {
+    background-color: #fff;
+    color: #80808f;
+    padding: 0.75rem 1.5rem;
+
+    .sub-nav-container {
+      display: flex;
+      gap: 2rem;
+
+      .sub-nav-link {
+        text-decoration: none;
+        color: inherit;
+        transition: color 0.2s ease;
+        padding-bottom: 0.75rem;
+
+        &:hover {
+          color: #5137a6;
+        }
+
+        &.active {
+          color: #5137a6;
+          font-weight: 500;
+          border-bottom: 2px solid #5137a6;
+        }
+      }
+    }
+  }
+}

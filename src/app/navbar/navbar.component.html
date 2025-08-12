@@ -1,6 +1,41 @@
-<mat-toolbar color="primary">
-  <span>Yallago Dashboard</span>
-  <span class="spacer"></span>
-  <button mat-button (click)="switchLang('en')">EN</button>
-  <button mat-button (click)="switchLang('ar')">AR</button>
-</mat-toolbar>
+<!-- Replacing Tailwind classes with semantic SCSS classes -->
+<header class="navbar-header">
+  <div class="navbar-container">
+    <div class="navbar-content">
+      <!-- Logo -->
+      <div class="logo"><img src="../../assets/images/logo.png" alt="Logo"></div>
+
+
+      <!-- Navigation -->
+      <nav class="main-navigation">
+        <a 
+          *ngFor="let item of navigationItems" 
+          [href]="item.href" 
+          [class]="'nav-link' + (item.active ? ' active' : '')"
+        >
+          {{ item.label }}
+        </a>
+      </nav>
+
+      <div class="user-info">
+        <div class="user-avatar">
+          <span>A</span>
+        </div>
+        <span class="user-name">Abdalrahman</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sub Navigation -->
+  <div class="sub-navigation">
+    <div class="sub-nav-container">
+      <a 
+        *ngFor="let item of subNavigationItems" 
+        [href]="item.href" 
+        [class]="'sub-nav-link' + (item.active ? ' active' : '')"
+      >
+        {{ item.label }}
+      </a>
+    </div>
+  </div>
+</header>

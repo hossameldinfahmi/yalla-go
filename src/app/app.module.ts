@@ -9,19 +9,22 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
+import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 
 export function HttpLoaderFactory() {
   return new TranslateHttpLoader();
 }
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent],
+  declarations: [AppComponent, NavbarComponent, NotFoundComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-        MatToolbarModule,
+    MatToolbarModule,
     MatButtonModule,
+    MatMenuModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
